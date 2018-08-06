@@ -1,0 +1,217 @@
+/* 背景 */
+#qq_bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* 
+  all  遍历所有属性 属性有没有改变状态 有 -> 触发过渡 没有->就不管了 
+  transform 
+   */
+  transition: transform 1s;
+}
+
+/* 背景旋转的样式 */
+.qq_bg_rotate{
+  transform: rotate(-30deg);
+}
+
+/* 圆角的公用样式 */
+#qq_bg>div{
+  position: absolute;
+  border-radius: 50%;
+  /* 线性渐变 */
+  background-image: linear-gradient(#ccc,#fff);
+
+  /* 动画 */
+  animation: ani_circle 20s infinite linear ;
+}
+
+
+
+/* 圆球的动画 */
+@keyframes ani_circle{
+  0%{}
+  100%{
+    transform: translateX(-1000px) rotate(720deg);
+  }
+}
+
+.circle1{
+  width: 50px;
+  height: 50px;
+  top: 5%;
+  left: 40%;
+}
+.circle2{
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 80%;
+}
+.circle3{
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 83%;
+}
+.circle4{
+  width: 180px;
+  height: 180px;
+  top: 20%;
+  left: 5%;
+}
+.circle5{
+  width: 220px;
+  height: 220px;
+  top: 25%;
+  left: 15%;
+}
+.circle6{
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 55%;
+}
+
+/* 111111111111 */
+.s1{
+  position: relative;
+  perspective: 1000px;
+}
+.s1_main{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition: transform 1s;
+}
+.s1_main_begin{
+  transform: translate3d(-50%,-50%,800px) rotateY(180deg);
+}
+.s1_skin{
+  position: absolute;
+  top: 0;
+}
+/* 111111111111 */
+
+/* 2222222222 */
+
+.s2{
+  perspective: 1000px;
+}
+
+.s2_main{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition: transform 1s;
+}
+
+/* 开始的状态 */
+.s2_main_begin{
+  transform: translate3d(-50%,-50%,-10000px);
+}
+/* 结束的状态 */
+.s2_main_end{
+  transform: translate3d(-50%,-50%,1000px);
+}
+.s2_main>img{
+  display: block;
+}
+/* 2222222222 */
+
+/* 3333 */
+.s3{
+  z-index: 100;
+  perspective: 1000px;
+}
+.s3_main{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 100%;
+  height: 100%;
+  transform: rotateX(30deg);
+  transition: transform 1s;
+}
+
+/* 容器 开始的状态 */
+.s3_main_begin{
+  transform: translateY(2000px) rotateX(30deg);
+}
+
+/* 右侧浏览器开始的状态 */
+.s3_main_begin .s3_browser{
+  transform: translateX(2000px);
+}
+/* 右侧浏览器 */
+.s3_browser{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: transform 1s;
+}
+
+/* 左侧文字标题 */
+.s3_title{
+  position: absolute;
+  top: 100px;
+  left: -300px;
+  transition: transform 1s;
+}
+/* 左侧文字标题开始的状态 */
+.s3_main_begin .s3_title{
+  transform: translateX(-2000px);
+}
+/* 3333 */
+
+
+/* 4444444444444 */
+.s4_main{
+  width: 630px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition: all 1s;
+  /* border: 1px solid #000; */
+}
+/* 开始状态 */
+.s4_main_begin{
+  left: 0;
+  transform: translate(-50%,-100%) rotate(30deg);
+}
+.s4_img1{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.s4_img3{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.s4_img2{
+  position: absolute;
+  top: 216px;
+  left: 0;
+}
+.s4_img4{
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.s4_img5{
+  position: absolute;
+  bottom: 0;
+}
+
+
+/* 4444444444444 */
